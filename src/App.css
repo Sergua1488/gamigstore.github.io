@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background:
+    linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.9)),
+    url("c:\Users\Пользователь\Desktop\Downloads\Мои загрузки\ChatGPT Image 15 июл. 2026 г., 13_42_09.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: #0b0c10;
+  color: #c5c6c7;
   min-height: 100vh;
+}
+
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+}
+
+nav {
+  width: 100%;
+  background: rgba(31, 40, 51, 0.95);
+  padding: 20px 40px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  border-bottom: 2px solid #66fcf1;
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+nav a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a:hover {
+  color: #0b0c10;
+  background-color: #66fcf1;
+  box-shadow: 0 0 15px #66fcf1;
+}
+
+main,
+.App > div:last-child {
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background: linear-gradient(45deg, #66fcf1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(102, 252, 241, 0.2);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: #1f2833;
+  border: 1px solid #45f3ff;
+  border-radius: 8px;
+  padding: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(69, 243, 255, 0.4);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.product-card {
+  background: #1f2833;
+  border: 1px solid rgba(102, 252, 241, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: #66fcf1;
+  box-shadow: 0 10px 25px rgba(102, 252, 241, 0.2);
+}
+
+.product-card h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 15px 0 10px 0;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 550px;
+  padding: 15px 20px;
+
+  background: #0b0c10;
+  color: #fff;
+
+  border: 2px solid #66fcf1;
+  border-radius: 50px;
+
+  font-size: 17px;
+  outline: none;
+
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  box-shadow:
+    0 0 10px #66fcf1,
+    0 0 20px #66fcf1,
+    0 0 40px rgba(102, 252, 241, 0.5);
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+
+  background: transparent;
+  color: #66fcf1;
+
+  border: 2px solid #66fcf1;
+  border-radius: 8px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #66fcf1;
+  color: #0b0c10;
+
+  box-shadow:
+    0 0 10px #66fcf1,
+    0 0 20px #66fcf1,
+    0 0 40px rgba(102, 252, 241, 0.6);
 }
